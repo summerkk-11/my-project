@@ -1,0 +1,46 @@
+{
+  "language": "ja",
+  "target_language": "zh",
+  "model": "large-v3",
+  "device": "cpu",
+  "threads": 8,
+  "compute_type": "int8",
+  "condition_on_previous_text": false,
+  "initial_prompt": null,
+  "hotwords": "ご主人様",
+  "vad_filter": true,
+  "hallucination_silence_threshold": 2.5,
+  "audio_segment_seconds": 900,
+  "min_confidence": {
+    "word_median": 0.55,
+    "word_minimum": 0.03,
+    "max_no_speech": 0.6,
+    "max_compression_ratio": 2.4,
+    "min_avg_logprob": -1.0
+  },
+  "domain_replacements": {
+    "女装、親に電話": "ご主人様に電話",
+    "親に電話": "ご主人様に電話",
+    "お母さん": "ご主人様",
+    "ママ": "ご主人様"
+  },
+  "suspicious_terms": [
+    "注射",
+    "お注射",
+    "針",
+    "病院",
+    "医療",
+    "患者",
+    "さっき言った",
+    "私はあなたを愛しています",
+    "ご視聴ありがとうございました",
+    "チャンネル登録"
+  ],
+  "placeholder": "[无法识别]",
+  "min_translation_logprob": -0.9,
+  "outputs": {
+    "source_srt": true,
+    "chinese_srt": true,
+    "bilingual_srt": true
+  }
+}
